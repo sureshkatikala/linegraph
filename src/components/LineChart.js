@@ -53,6 +53,7 @@ class LineChart extends React.Component {
             </div>
         );
     }
+    // added a comment
 }
 
 export default LineChart;
