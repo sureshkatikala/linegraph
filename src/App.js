@@ -3,9 +3,10 @@ import './App.css';
 import LineChart from './components/LineChart';
 
 function App() {
+  let categories = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'];
   return (
     <div className="App">
-      <LineChart />
+      <LineChart title="Product Trends by Month" categories = {categories}  name="Desktops" data={[10, 41, 35, 51, 49, 62, 69, 91, 148, 240]}/>
     </div>
   );
 }

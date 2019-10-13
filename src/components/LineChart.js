@@ -20,7 +20,8 @@ class LineChart extends React.Component {
                     curve: 'straight'
                 },
                 title: {
-                    text: 'Product Trends by Month',
+                    // text: 'Product Trends by Month',
+                    text: this.props.title,
                     align: 'left'
                 },
                 grid: {
@@ -30,12 +31,15 @@ class LineChart extends React.Component {
                     },
                 },
                 xaxis: {
-                    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+                    // categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+                    categories: this.props.categories
                 }
             },
             series: [{
-                name: "Desktops",
-                data: [10, 41, 35, 51, 49, 62, 69, 91, 148, 240]
+                // name: "Desktops",
+                // data: [10, 41, 35, 51, 49, 62, 69, 91, 148, 240]
+                name: this.props.name,
+                data: this.props.data
             }],
         }
     }
